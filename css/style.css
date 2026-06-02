@@ -76,16 +76,11 @@ body {
 
 /* HEADER */
 .header {
-   position: fixed;
-   width: 100%;
-   top: 0;
-   left: 0;
    background-color: var(--tonal-background);
-   z-index: 999;
-   padding-block: 42px;
 }
 
-.header__container {
+.header__body {
+   padding-block: 28px;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -147,9 +142,8 @@ body {
 .hero {
    background-color: var(--tonal-background);
    display: flex;
-   min-height: 100svh;
+   /* min-height: 100svh; */
    align-items: flex-end;
-   padding-top: 12px;
 }
 
 .hero__container {
@@ -158,16 +152,17 @@ body {
 
    align-items: center;
    gap: 136px;
-   padding-bottom: 88px;
 }
 
-.hero__wrapper {
+.hero__body {
+   padding-top: 30px;
+   padding-bottom: 63px;
    display: flex;
    gap: 128px;
 }
 
 .hero__content {
-   padding-top: 189px;
+   padding-top: 53px;
    flex-grow: 1;
    flex-basis: 100px;
 }
@@ -214,13 +209,13 @@ body {
    gap: 39px;
 }
 
-.hero__frame-link {
+.hero__link {
    display: inline-flex;
    align-items: center;
    padding: 12px;
 }
 
-.hero__frame-link img {
+.hero__link img {
    display: block;
    flex-shrink: 0;
    margin-right: 10px;
@@ -233,17 +228,13 @@ body {
    color: var(--text-color);
 }
 
-.hero__picture {
-   margin-top: 140px;
-}
-
 .picture {
    position: relative;
 }
 
 .picture__ellipse {
    position: absolute;
-   top: 102px;
+   top: 115px;
    left: 43px;
    width: 421px;
    height: 421px;
@@ -254,7 +245,7 @@ body {
 
 .picture__image {
    position: relative;
-   top: -11px;
+   top: 0;
    left: 0;
    z-index: 2;
    width: 100%;
@@ -265,20 +256,19 @@ body {
 .page__learning {
    position: relative;
    z-index: 2;
-   margin-top: -73px;
-   padding: 73px 0;
    background: linear-gradient(
       to bottom,
       var(--tonal-background) 60%,
       var(--light-background-color) 40%
-   );
-}
+      );
+   }
 
 .learning__cards {
    display: flex;
    justify-content: center;
    gap: 31px;
    align-items: stretch;
+   padding-block: 73px;
 }
 
 .learning__card {
@@ -319,7 +309,7 @@ body {
 }
 
 /* PRODUCTS */
-.products {
+.products__body {
    padding-top: 100px;
    padding-bottom: 128px;
 }
@@ -387,11 +377,9 @@ body {
 }
 
 /* WHY-US */
-.why-us {
+.why-us__body {
+   padding-top: 128px;
    padding-bottom: 140px;
-}
-
-.why-us__container {
    display: flex;
    gap: 113px;
 }
@@ -439,7 +427,7 @@ body {
    max-width: 507px;
 }
 
-.why-us__content-title {
+.why-us__header {
    margin-bottom: 47px;
    display: flex;
    flex-direction: column;
@@ -479,20 +467,28 @@ body {
    margin-bottom: 60px;
 }
 
-.feature__title {
+.features__title {
    margin-bottom: 5px;
 }
 
 /* PRICING */
 .pricing {
-   background-color: var(--dark-background);
+   position: relative;
+   z-index: 2;
+   background: linear-gradient(
+      to bottom,
+      var(--dark-background) 85%,
+      var(--light-background-color) 40%
+   );
 }
 
-.pricing__container {
+.pricing__body {   
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   padding-top: 110px;
+   padding-bottom: 106px;
 }
 
 .pricing__header {
@@ -501,7 +497,6 @@ body {
    justify-content: center;
    align-items: center;
    text-align: center;
-   padding-top: 110px;
    padding-bottom: 92px;
    color: var(--light-text-color);
 }
@@ -635,20 +630,18 @@ body {
   background-color: var(--muted-color);
 }
 
-.reviews {
-   margin-top: 405px;
-}
-
+/* Reviews */
 .reviews__body {
-   padding-top: 135px;
+   padding-top: 340px;
    padding-bottom: 87px;
 }
 
 .reviews__title {
    margin-bottom: 110px;
    text-align: center;
-   text-transform: lowercase;
+   text-transform: capitalize;
 }
+
 .reviews__wrapper {
    position: relative;
    margin: 0 auto;
@@ -682,7 +675,7 @@ body {
    margin-bottom: 16px;
 }
 
-.reviws__text {
+.reviews__text {
    text-align: center;
    font-size: 20px;
    font-family: "Open Sans",sans-serif;
@@ -739,7 +732,7 @@ body {
 .dots .active {
    background-color: var(--primary-color);
 }
-
+/* Join */
 .join {
    background-color: var(--tonal-background);
 }
@@ -748,7 +741,7 @@ body {
    display: flex;
    align-items: center;
    justify-content: space-between;
-   padding: 75px 94px 75px 88px;
+   padding-block: 75px;
 }
 
 .join__content {
@@ -780,6 +773,7 @@ body {
    color: var(--text-color);
 }
 
+/* footer */
 .footer__body {
    padding-block: 80px;
    padding-right: 90px;
